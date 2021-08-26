@@ -4,16 +4,19 @@
   "private": true,
   "description": "Test 3rd Party Tools to install direct `peerDependencies`",
   "scripts": {
-    "prepare": "npm-install-peers",
-    "-1prepare": "install-peers",
-    "-2prepare": "install-self-peers --npm -- --ignore-scripts"
+    "clean": "rimraf node_modules",
+    "prepare": "npm run test1",
+    "test1": "npm-install-peers",
+    "test2": "install-peers",
+    "test3": "install-self-peers --npm -- --ignore-scripts"
   },
   "author": "Wayne",
   "license": "ISC",
   "devDependencies": {
     "@team-griffin/install-self-peers": "^1.1.1",
     "install-peers-cli": "^2.2.0",
-    "npm-install-peers": "^1.2.2"
+    "npm-install-peers": "^1.2.2",
+    "rimraf": "^3.0.2"
   },
   "peerDependencies": {
     "@babel/cli": ">=7"

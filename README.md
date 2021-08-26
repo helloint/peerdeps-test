@@ -42,15 +42,16 @@ Test `npm install`
 |   | npm-install-peers | install-peers-cli | @team-griffin/install-self-peers |
 |:---:|:---:|:---:|:---:|
 | Windows: | ✅ | ❌<sup>(1)</sup> | ❌<sup>(2)</sup> |
-| macOS |   |   |   |
-| Linux |   |   |   |
+| macOS | ✅ | ✅ | ❌<sup>(2)</sup> |
 
 Note:
 1. Known issue, see https://github.com/alexindigo/install-peers-cli/issues/12
 2. It adds the "peerDependencies" to "dependencies", thus package.json get updated, no good.
 
-So, prefer to use `npm-install-peers`  
+So, prefer to use `npm-install-peers`, and it is also the most popular one.  
 
 ## Disadvantage
-`peerDependencies` will be re-installed every time you run `npm install`, which will slow down the regular works. 
+`peerDependencies` will be re-installed every time you run `npm install`, which will slow down the regular works.
+So the hope is NPM can take over the works in future.  
+
 Ups to you ^_^
