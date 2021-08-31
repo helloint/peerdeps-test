@@ -5,7 +5,7 @@
   "description": "Test 3rd Party Tools to install direct `peerDependencies`",
   "scripts": {
     "clean": "rimraf node_modules",
-    "prepare": "",
+    "prepare": "npm run test1",
     "test1": "npm-install-peers",
     "test2": "install-peers",
     "test3": "install-self-peers --npm -- --ignore-scripts"
@@ -19,9 +19,9 @@
     "rimraf": "^3.0.2"
   },
   "peerDependencies": {
-    "@babel/cli": ">=7"
+    "react-share": "^4.2.0"
   },
   "dependencies": {
-    "react-dom": "^17.0.2"
+    "file-loader": "^6.2.0"
   }
 }
